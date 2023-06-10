@@ -13,3 +13,38 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+h1,h2,h3,h4,h5,h6,p,li,ul {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+h1 {
+  color: darkolivegreen;
+  text-align: center;
+}
+
+h2 {
+  color: darkolivegreen;
+  text-align: center;
+}
+.section {
+  margin-bottom: 20px;
+  border: solid 5px darkolivegreen;
+  gap: 20px;
+  border-radius: 25px;
+
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  color: #010101;
+}
