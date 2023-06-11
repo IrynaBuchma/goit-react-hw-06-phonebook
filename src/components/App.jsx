@@ -1,18 +1,12 @@
-import { useEffect } from 'react';
-import { connect } from 'react-redux';
 import Layout from './Layout/Layout';
 import ContactForm from './ContactForm/ContactForm';
 import ContactList from './ContactList/ContactList';
 import Filter from './Filter/Filter';
+import { useSelector } from 'react-redux';
+import { getContacts } from 'redux/phonebook/selectors';
 
-const App = ({ contacts }) => {
-   
-  useEffect(() => {
-    localStorage.setItem('contacts', JSON.stringify(contacts));
-  }, [contacts]);
-
-  console.log(contacts);
-
+const App = () => {
+   const contacts = useSelector(getContacts)
   return (
     <Layout>
       <div className='section'>
@@ -29,8 +23,5 @@ const App = ({ contacts }) => {
     </Layout>
   );
 };
-const mapStateToProps = state => ({
-  contacts: state.contacts,
-});
 
-export default connect(mapStateToProps)(App);
+export default App;

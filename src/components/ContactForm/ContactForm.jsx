@@ -1,9 +1,9 @@
 import {useState} from 'react';
 import { useSelector, useDispatch} from 'react-redux';
-import { getContacts } from '../../redux/phonebook/selectors';
+import { getContacts } from 'redux/phonebook/selectors';
 import PropTypes from 'prop-types';
 import css from './ContactForm.module.css';
-import { addContact } from '../../redux/phonebook/contactsSlice';
+import { addContact } from 'redux/phonebook/contactsSlice';
 
 export default function ContactForm() {
 

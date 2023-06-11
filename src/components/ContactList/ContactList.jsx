@@ -11,18 +11,10 @@ export default function ContactList() {
 
     const onDeleteBtn = id => dispatch(deleteContact(id));
 
-    console.log(contacts);
-    console.log(filterValue);
-
-    const filteredContacts = (contacts, filterValue) => {
-       if(filterValue) {
-        return contacts.filter(contact => 
-          contact.name.toLowerCase().includes(filterValue.toLowerCase()));
-       }
-       else {
-        return contacts;
-       }
-    }
+    const filteredContacts = (contacts, filterValue) => 
+      filterValue
+        ? contacts.filter(contact => contact.name.toLowerCase().includes(filterValue.toLowerCase()))
+        : contacts;
 
     const filterContacts = filteredContacts(contacts, filterValue);
 
